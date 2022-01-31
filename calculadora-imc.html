@@ -1,22 +1,65 @@
 <!DOCTYPE html>
+
+<style>
+.corpo{
+	background: mediumslateblue;
+	padding: 40px;
+}
+
+.titulo{
+	text-align: center;
+	color: #fff;
+}
+
+.calculadora{
+	text-align: center;
+}
+
+.digite{
+	font-size: 22px;
+    color: #fff;
+}
+
+.input{
+	border-radius: 20px;
+	border: 10px;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.button{
+	border-radius: 20px;
+    font-size: 16px;
+    padding: 9px;
+    color: mediumslateblue;
+    background: #FFF;
+	font-weight: bold;
+}
+
+</style>
+
+
 <html>
 
 	<head>
 		<title>Calculadora de IMC</title>
-
 		<script type="text/javascript" src="script-imc.js"></script>
 	</head>
 
-	<body>
-		
-		<form method="POST" onsubmit="return calcular()">
-			Digite seu peso: <br/>
-			<input type="text" name="peso" id="peso" placeholder="Exemplo: 65" /> <br/><br/>
-			Digite sua altura: <br/>
-			<input type="text" name="altura" id="altura" placeholder="Exemplo: 1.90"> <br/><br/>
+	<body class="corpo">
+		<h1 class="titulo">Calculadora de IMC</h1>
+		<div class="calculadora">
+			<form method="POST" onsubmit="return calcular()">
+				<p class="digite">Digite seu peso:</p>
+				<input class="input" type="text" name="peso" id="peso" placeholder="Exemplo: 65" />
+				<p class="digite">Digite sua altura:</p>
+				<input class="input" type="text" name="altura" id="altura" placeholder="Exemplo: 1.90"> 
+				
+				<br/><br/>
 
-			<input type="submit" value="Calular IMC">
-		</form>
+				<input class="button" type="submit" value="Calular IMC">
+			</form>
+		</div>
 
 		<div id="resultado"></div>
 	</body>
